@@ -1,0 +1,10 @@
+<h2>Información del RUT</h2>
+
+<div *ngIf="rut">
+  <p>RUT: {{ rut }}</p>
+  <!-- Muestra aquí la información adicional obtenida de la base de datos -->
+</div>
+
+<div *ngIf="!rut">
+  <p>No se ha enviado ningún RUT.</p>
+</div>
