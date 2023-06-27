@@ -1,0 +1,18 @@
+<head>
+    <title>Buscar información por RUT</title>
+    <link rel="stylesheet" href="formulario.component.css"> <!-- Agrega esta línea -->
+  </head>
+  <body>
+    <h2>Buscar información por RUT</h2>
+    <form (ngSubmit)="buscar()" #formulario="ngForm">
+      <div>
+        <label for="rut">RUT:</label>
+        <input type="text" id="rut" name="rut" ngModel required>
+      </div>
+      <button type="submit" [disabled]="!formulario.valid">Buscar</button>
+    </form>
+    <div *ngIf="resultado">
+      <h3>Resultado:</h3>
+      <p>{{ resultado }}</p>
+    </div>
+  </body>
